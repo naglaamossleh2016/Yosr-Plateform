@@ -57,10 +57,9 @@ body {
 .slicknav_menu ul{background-color: #e8e8e8}
 /* الشعار على اليسار */
 .navbar-brand {
-  position: absolute;
+  position: fixed;
   left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 15px;
   margin: 0;
   z-index: 1050;
 }
@@ -231,12 +230,17 @@ footer{
 }
 
 /* التعديلات للشاشات الصغيرة */
-@media (max-width: 991px) {
+@media (max-width : 992px) {
   /* إخفاء القائمة الأصلية */
   .navbar-collapse {
     display: none !important;
   }
-  
+  .slicknav_menu{
+    display: block;
+  }
+  .navbar-header{
+    width: 100%;
+  }
   /* تعديلات الشعار */
   .navbar-brand img {
     height: 35px;
@@ -268,7 +272,8 @@ footer{
   /* إخفاء عناصر الجوال */
   .navbar-toggler,
   .mobile-menu,
-  .menu-backdrop {
+  .menu-backdrop,
+  .slicknav_menu {
     display: none !important;
   }
   
@@ -308,3 +313,47 @@ footer{
   }
 }
 /* بقية التنسيقات... */
+
+/* Login Section Styling */
+.login-container {
+    background: url('../img/bg.jpg') no-repeat center center;
+    background-size: cover;
+    margin: 0 10%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    padding: 40px 0;
+}
+
+
+.login-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+.login-right img{
+  width: 200px;
+}
+.login-right h3 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+.form-control{
+  border-radius: 0;
+  color: var(--text-color);
+  border-radius: 10px;
+  border: 1px solid #606a74;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .login-form,
+    .login-right {
+        padding: 30px;
+        margin: 10px;
+    }
+}
