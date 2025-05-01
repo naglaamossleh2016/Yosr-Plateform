@@ -54,6 +54,7 @@ body {
 .slicknav_btn{
   margin: 12px 0;
 }
+.slicknav_menu ul{background-color: #e8e8e8}
 /* الشعار على اليسار */
 .navbar-brand {
   position: absolute;
@@ -136,24 +137,6 @@ body {
   padding-right: 15px;
 }
 
-/* زر إغلاق القائمة */
-.close-menu {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  font-size: 1.8rem;
-  color: var(--text-color);
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: var(--transition);
-  z-index: 1060;
-}
-
-.close-menu:hover {
-  color: var(--primary-color);
-  transform: rotate(90deg);
-}
 
 /* طبقة التعتيم الخلفية */
 .menu-backdrop {
@@ -181,7 +164,7 @@ body.menu-open {
 
 /* قسم الهيرو */
 #hero-area {
-  background: url('../img/hero-bg.jpg') no-repeat center center;
+  background: url('../img/hero-area.jpg') no-repeat center center;
   background-size: cover;
   min-height: 100vh;
   color: var(--white);
@@ -242,6 +225,9 @@ body.menu-open {
   color: var(--white);
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+footer{
+  padding: 0;
 }
 
 /* التعديلات للشاشات الصغيرة */
@@ -309,6 +295,11 @@ body.menu-open {
   /* تعديلات الهيرو */
   #hero-area {
     margin-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .copyright {
+      float: none;
   }
 }
 @media (min-width: 576px) {
