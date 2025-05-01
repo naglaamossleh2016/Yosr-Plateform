@@ -92,7 +92,12 @@ body {
 .navbar-toggler:focus {
   outline: none;
 }
-
+/* .nav-item{
+  position: relative;
+} */
+.navbar-expand-lg .navbar-nav .nav-link{
+ margin-bottom: 0; 
+}
 /* القائمة الطافية للجوال */
 .mobile-menu {
   position: fixed;
@@ -135,7 +140,10 @@ body {
   color: var(--primary-color);
   padding-right: 15px;
 }
-
+.mobile-menu .nav-link.active {
+  color: var(--primary-color) !important;
+  font-weight: bold;
+}
 
 /* طبقة التعتيم الخلفية */
 .menu-backdrop {
@@ -165,11 +173,11 @@ body.menu-open {
 #hero-area {
   background: url('../img/hero-area.jpg') no-repeat center center;
   background-size: cover;
-  min-height: 100vh;
+  
   color: var(--white);
   position: relative;
-  margin-top: -70px;
-  padding-top: 70px;
+  /* margin-top: -70px;
+  padding-top: 70px; */
   display: flex;
   align-items: center;
 }
@@ -200,7 +208,15 @@ body.menu-open {
   font-size: 1.2rem;
   margin-bottom: 30px;
 }
-
+.profile .dropdown-menu {
+  right: inherit;
+  min-width: 20rem;
+  left: 0;
+  text-align: right;
+}
+.profile img{
+  cursor:pointer;
+}
 /* الأزرار */
 .btn {
   display: inline-block;
@@ -283,7 +299,7 @@ footer{
   /* إعادة ضبط الشريط العلوي */
   .navbar {
     /* position: static; */
-    padding: 15px;
+    /* padding: 15px; */
     height: auto;
   }
   
@@ -381,4 +397,56 @@ footer{
         padding: 30px;
         margin: 10px;
     }
+}
+@media (max-width: 992px) {
+  .navbar-brand {
+    display: none; /* Hide the logo */
+  }
+  .profile {
+    display: block !important; /* Show the profile image */
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    z-index: 1050;
+  }
+}
+.nav-item.dropdown .dropdown-toggle::after {
+  display: inline-block;
+  margin-right: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu{
+  padding: 0;
+  margin: 0;
+  min-width:30rem;
+  background-color: var(--white);
+  color: var(--text-color);
+}
+.dropdown-item.active, .dropdown-item:active{
+  background-color: var(--secondary-color);
+  color:var(--white) ;
+}
+.dropdown-item{
+  padding: 12px 15px;
+  border-bottom: 1px solid #f0f0f0; /* Add divider between items */
+}
+
+.dropdown-item:last-child {
+  border-bottom: none; /* Remove divider from the last item */
+}
+
+/* Style for visited links */
+.nav-link:visited {
+  color: var(--primary-color);
+  font-weight: bold;
 }

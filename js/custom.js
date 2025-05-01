@@ -1,3 +1,14 @@
+$(document).ready(function() {
+  // Hide dropdown menu when mouse leaves the profile dropdown
+  $('.profile').on('mouseleave', function() {
+    $(this).find('.dropdown-menu').removeClass('show');
+  });
+
+  // Show dropdown menu when profile icon is clicked
+  $('.profile .dropdown-toggle').on('click', function() {
+    $(this).next('.dropdown-menu').toggleClass('show');
+  });
+});
 (function ($) {
   "use strict";
 
@@ -9,7 +20,7 @@
       } else {
         event.preventDefault();
         console.log("Form submitted successfully");
-        window.location.href = "index.html";
+        window.location.href = "landing-page.html";
       }
     });
 
@@ -28,6 +39,6 @@
       $('.navbar-nav').slicknav('destroy'); // Destroy slicknav if causing issues
     }
   });
+
+  
 })(jQuery);
-// عند تحميل الصفحة
-// تنشيط القائمة الطافية
