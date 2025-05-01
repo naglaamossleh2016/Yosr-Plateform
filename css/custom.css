@@ -65,7 +65,7 @@ body {
 }
 
 .navbar-brand img {
-  height: 40px;
+  height: 80px;
   width: auto;
   transition: var(--transition);
 }
@@ -225,6 +225,9 @@ body.menu-open {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+.copyright p a{
+  color:#33B290;
+}
 footer{
   padding: 0;
 }
@@ -316,6 +319,7 @@ footer{
 
 /* Login Section Styling */
 .login-container {
+    position: relative;
     background: url('../img/bg.jpg') no-repeat center center;
     background-size: cover;
     margin: 0 10%;
@@ -324,6 +328,24 @@ footer{
     overflow: hidden;
     display: flex;
     padding: 40px 0;
+}
+
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(244, 243, 243, 0.551); /* Adjust the opacity (0.4) for desired fade effect */
+    z-index: 1;
+}
+
+/* Ensure content stays above the faded background */
+.login-form,
+.login-right {
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -347,6 +369,9 @@ footer{
   color: var(--text-color);
   border-radius: 10px;
   border: 1px solid #606a74;
+}
+.form-control input,.form-control:focus{
+  color:var(--text-color);
 }
 
 /* Responsive adjustments */
