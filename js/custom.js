@@ -1,3 +1,8 @@
+function loadExternalSite() {
+ 
+  var contentDiv = document.getElementById("content");
+  contentDiv.innerHTML = '<iframe src="https://ar.wikipedia.org/wiki/الصفحة_الرئيسية" style="width:100%; height:100%; border:none;"></iframe>';
+}
 $(document).ready(function() {
   // Hide dropdown menu when mouse leaves the profile dropdown
   $('.profile').on('mouseleave', function() {
