@@ -32,17 +32,17 @@ $(document).ready(function() {
     // Initialize WOW.js for animations
     new WOW().init();
 
-    // Fix navbar toggler to prevent redirect and ensure menu opens
-    $('.navbar-toggler').on('click', function (event) {
-      event.preventDefault(); // Prevent default behavior
-      event.stopPropagation(); // Stop event propagation to parent elements
-      $('#main-navbar').collapse('toggle'); // Manually toggle the menu
-    });
+    // // Fix navbar toggler to prevent redirect and ensure menu opens
+    // $('.navbar-toggler').on('click', function (event) {
+    //   event.preventDefault(); // Prevent default behavior
+    //   event.stopPropagation(); // Stop event propagation to parent elements
+    //   $('#main-navbar').collapse('toggle'); // Manually toggle the menu
+    // });
 
-    // Optional: Disable slicknav if it conflicts with Bootstrap
-    if ($.fn.slicknav) {
-      $('.navbar-nav').slicknav('destroy'); // Destroy slicknav if causing issues
-    }
+    // // Optional: Disable slicknav if it conflicts with Bootstrap
+    // if ($.fn.slicknav) {
+    //   $('.navbar-nav').slicknav('destroy'); // Destroy slicknav if causing issues
+    // }
   });
 
   
