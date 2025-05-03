@@ -1,8 +1,13 @@
-function loadExternalSite() {
- 
-  var contentDiv = document.getElementById("content");
-  contentDiv.innerHTML = '<iframe src="https://ar.wikipedia.org/wiki/الصفحة_الرئيسية" style="width:100%; height:100%; border:none;"></iframe>';
-}
+$(document).ready(function() {
+  // Add collapsed class to header toggle arrow initially
+  $('.header-toggle-arrow').click(function() {
+    $('#hero-area').slideToggle();
+    $(this).find('i').toggleClass('fa-chevron-up fa-chevron-down');
+    $(this).toggleClass('header-collapsed header-expanded');
+    // Adjust content height based on header state
+    $('#content').toggleClass('content-expanded content-collapsed');
+  });
+});
 $(document).ready(function() {
   // Hide dropdown menu when mouse leaves the profile dropdown
   $('.profile').on('mouseleave', function() {

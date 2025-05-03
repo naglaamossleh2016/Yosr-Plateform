@@ -50,10 +50,18 @@ h1, h2, h3, h4, h5{
 }
 #content {
   width: 100%;
-  height: calc(100vh - 160px); /* 100vh - header (70px) - footer (60px) */
+ 
+  
   border: 1px solid #ccc;
   margin-top: 0;
   
+}
+.content-expanded{
+ /* 100vh - header (70px) - footer (52px) */
+   height: calc(100vh - 152px); 
+}
+.content-collapsed{
+  height: calc(100vh - 52px); 
 }
 
 /* Add this if you have a footer element */
@@ -128,6 +136,45 @@ footer {
 } 
 .navbar-expand-lg .navbar-nav .nav-link{
  margin-bottom: 0; 
+}
+.header-toggle-arrow {
+  position: absolute;
+  top: 90px;
+  left: 35px;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background:var(--primary-color);
+  
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+.header-toggle-arrow.header-expanded{
+  top: 90px;
+  left: 35px;
+  transition: down 0.3s ease-in-out;
+}
+.header-toggle-arrow.header-collapsed {
+  top: -10px;
+  left:35px;
+  transition: top 0.3s ease-in-out;
+}
+
+.header-toggle-arrow.rotated i {
+  transform: rotate(180deg);
+}
+
+.header-toggle-arrow i {
+  line-height: 30px;
+  color: var(--white);
+}
+
+.header-toggle-arrow:hover {
+  background: var(--secondary-color);
+  color: var(--white);
 }
 /* القائمة الطافية للجوال */
 .mobile-menu {
