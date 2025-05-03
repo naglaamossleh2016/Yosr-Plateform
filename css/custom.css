@@ -1,9 +1,12 @@
 /* custom.css - الملف الكامل مع جميع التعديلات */
-
+@import url('../fonts/OMNES-ARABIC-REGULAR.ttf');
+@import url('../fonts/OMNES-ARABIC-BOLD.ttf');
 /* المتغيرات العامة */
 :root {
-  --primary-color: #61D2B4;
-  --secondary-color: #33b391;
+  /* --primary-color: #61D2B4;
+  --secondary-color: #33b391; */
+  --primary-color: #3a7565;
+  --secondary-color: #346357;
   --text-color: #333;
   --light-bg: #f8f9fa;
   --dark-bg: #343a40;
@@ -11,7 +14,12 @@
   --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
 }
-
+@font-face {
+  font-family:"OMNES-ARABIC-REGULAR" ;
+  src: url('../fonts/OMNES-ARABIC-REGULAR.ttf');
+  font-family: "OMNES-ARABIC-BOLD" ;
+  src: url('../fonts/OMNES-ARABIC-BOLD.ttf');
+}
 /* التنسيقات الأساسية */
 * {
   margin: 0;
@@ -24,17 +32,21 @@ html {
 }
 
 body {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'OMNES-ARABIC-REGULAR','Tajawal', sans-serif;
   direction: rtl;
   color: var(--text-color);
   background-color: var(--light-bg);
   min-height: 100vh;
   display: flex;
+  font-size: 16px;
   flex-direction: column;
   padding-top: 70px;
   line-height: 1.6;
 }
+h1, h2, h3, h4, h5{
+  font-family: 'OMNES-ARABIC-REGULAR','Tajawal', sans-serif;
 
+}
 /* شريط التنقل */
 .navbar {
   position: fixed;
@@ -93,9 +105,11 @@ body {
 .navbar-toggler:focus {
   outline: none;
 }
-/* .nav-item{
-  position: relative;
-} */
+ .nav-item{
+  font-family: 'OMNES-ARABIC-BOLD','tajawal',sans-serif;
+  /* font-weight: bold; */
+  font-size: 14px;
+} 
 .navbar-expand-lg .navbar-nav .nav-link{
  margin-bottom: 0; 
 }
@@ -241,6 +255,23 @@ body.menu-open {
   color: var(--white);
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.navbar .nav-link.active{
+  background-color: var(--primary-color);
+}
+.btn-common{
+  background-color: var(--primary-color);
+}
+.btn-common:hover{
+  background-color: var(--secondary-color);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+.controls .active{
+  color:var(--primary-color) !important;
+}
+.video-promo {
+  background: var(--primary-color);
 }
 .copyright p a{
   color:#33B290;
@@ -433,11 +464,13 @@ footer{
   min-width:25rem;
   background-color: var(--white);
   color: var(--text-color);
+  border-radius: 10px;
 }
 .dropdown-item.active, .dropdown-item:active{
-  background-color: var(--secondary-color);
+  background-color: #61a795;
   color:var(--white) ;
 }
+
 .dropdown-item{
   padding: 12px 15px;
   border-bottom: 1px solid #f0f0f0; /* Add divider between items */
