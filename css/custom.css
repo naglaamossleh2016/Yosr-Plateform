@@ -1,6 +1,6 @@
 /* custom.css - الملف الكامل مع جميع التعديلات */
-@import url('../fonts/OMNES-ARABIC-REGULAR.ttf');
-@import url('../fonts/OMNES-ARABIC-BOLD.ttf');
+@import url("../fonts/OMNES-ARABIC-REGULAR.ttf");
+@import url("../fonts/OMNES-ARABIC-BOLD.ttf");
 /* المتغيرات العامة */
 :root {
   /* --primary-color: #61D2B4;
@@ -15,10 +15,10 @@
   --transition: all 0.3s ease;
 }
 @font-face {
-  font-family:"OMNES-ARABIC-REGULAR" ;
-  src: url('../fonts/OMNES-ARABIC-REGULAR.ttf');
-  font-family: "OMNES-ARABIC-BOLD" ;
-  src: url('../fonts/OMNES-ARABIC-BOLD.ttf');
+  font-family: "OMNES-ARABIC-REGULAR";
+  src: url("../fonts/OMNES-ARABIC-REGULAR.ttf");
+  font-family: "OMNES-ARABIC-BOLD";
+  src: url("../fonts/OMNES-ARABIC-BOLD.ttf");
 }
 /* التنسيقات الأساسية */
 * {
@@ -32,7 +32,7 @@ html {
 }
 
 body {
-  font-family: 'OMNES-ARABIC-REGULAR','Tajawal', sans-serif;
+  font-family: "OMNES-ARABIC-REGULAR", "Tajawal", sans-serif;
   direction: rtl;
   color: var(--text-color);
   background-color: var(--light-bg);
@@ -44,24 +44,28 @@ body {
   /* padding-top: 70px; */
   line-height: 1.6;
 }
-h1, h2, h3, h4, h5{
-  font-family: 'OMNES-ARABIC-REGULAR','Tajawal', sans-serif;
-
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "OMNES-ARABIC-REGULAR", "Tajawal", sans-serif;
 }
 #content {
   width: 100%;
- 
-  
+
   border: 1px solid #ccc;
   margin-top: 0;
-  
 }
-.content-expanded{
- /* 100vh - header (70px) - footer (52px) */
-   height: calc(100vh - 152px); 
+.form-check {
+  padding-right: 1.25rem;
 }
-.content-collapsed{
-  height: calc(100vh - 52px); 
+.content-expanded {
+  /* 100vh - header (70px) - footer (52px) */
+  height: calc(100vh - 152px);
+}
+.content-collapsed {
+  height: calc(100vh - 52px);
 }
 
 /* Add this if you have a footer element */
@@ -84,14 +88,15 @@ footer {
   transition: var(--transition);
   height: 70px;
 }
-.navbar-expand-lg .navbar-nav .nav-link{
+.navbar-expand-lg .navbar-nav .nav-link {
   color: var(--text-color);
- 
 }
-.slicknav_btn{
+.slicknav_btn {
   margin: 12px 0;
 }
-.slicknav_menu ul{background-color: #e8e8e8}
+.slicknav_menu ul {
+  background-color: #e8e8e8;
+}
 /* الشعار على اليسار */
 .navbar-brand {
   position: fixed;
@@ -129,13 +134,13 @@ footer {
 .navbar-toggler:focus {
   outline: none;
 }
- .nav-item{
-  font-family: 'OMNES-ARABIC-BOLD','tajawal',sans-serif;
+.nav-item {
+  font-family: "OMNES-ARABIC-BOLD", "tajawal", sans-serif;
   /* font-weight: bold; */
   font-size: 14px;
-} 
-.navbar-expand-lg .navbar-nav .nav-link{
- margin-bottom: 0; 
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  margin-bottom: 0;
 }
 .header-toggle-arrow {
   position: absolute;
@@ -144,22 +149,22 @@ footer {
   transform: translateX(-50%);
   width: 30px;
   height: 30px;
-  background:var(--primary-color);
-  
+  background: var(--primary-color);
+
   border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 1000;
 }
-.header-toggle-arrow.header-expanded{
+.header-toggle-arrow.header-expanded {
   top: 90px;
   left: 35px;
   transition: down 0.3s ease-in-out;
 }
 .header-toggle-arrow.header-collapsed {
   top: -10px;
-  left:35px;
+  left: 35px;
   transition: top 0.3s ease-in-out;
 }
 
@@ -249,11 +254,11 @@ body.menu-open {
 
 /* قسم الهيرو */
 #hero-area {
-  background:none;
+  background: none;
   color: var(--white);
   background-color: var(--white) !important;
   position: relative;
-  overflow:unset;
+  overflow: unset;
   /* margin-top: -70px;
   padding-top: 70px; */
   display: flex;
@@ -262,7 +267,7 @@ body.menu-open {
 }
 
 #hero-area::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -293,8 +298,8 @@ body.menu-open {
   left: 0;
   text-align: right;
 }
-.profile img{
-  cursor:pointer;
+.profile img {
+  cursor: pointer;
 }
 /* الأزرار */
 .btn {
@@ -320,40 +325,40 @@ body.menu-open {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-.navbar .nav-link.active{
+.navbar .nav-link.active {
   background-color: var(--primary-color);
 }
-.btn-common{
+.btn-common {
   background-color: var(--primary-color);
 }
-.btn-common:hover{
+.btn-common:hover {
   background-color: var(--secondary-color);
   color: var(--white);
   transform: translateY(-3px);
 }
-.controls .active{
-  color:var(--primary-color) !important;
+.controls .active {
+  color: var(--primary-color) !important;
 }
 .video-promo {
   background: var(--primary-color);
 }
-.copyright p a{
-  color:#33B290;
+.copyright p a {
+  color: #33b290;
 }
-footer{
+footer {
   padding: 0;
 }
 
 /* التعديلات للشاشات الصغيرة */
-@media (max-width : 992px) {
+@media (max-width: 992px) {
   /* إخفاء القائمة الأصلية */
   .navbar-collapse {
     display: none !important;
   }
-  .slicknav_menu{
+  .slicknav_menu {
     display: block;
   }
-  .navbar-header{
+  .navbar-header {
     width: 100%;
   }
   /* تعديلات الشعار */
@@ -363,7 +368,7 @@ footer{
   .navbar-toggler i {
     transition: all 0.3s ease;
   }
-  
+
   /* تأكد من أن زر البرجر لا يحتوي على حدود أو خلفية */
   .navbar-toggler {
     border: none;
@@ -371,12 +376,12 @@ footer{
     outline: none;
     font-size: 1.5rem;
   }
-  
+
   /* تعديلات الهيرو */
   .hero-content h1 {
     font-size: 2rem;
   }
-  
+
   .hero-content p {
     font-size: 1rem;
   }
@@ -391,27 +396,27 @@ footer{
   .slicknav_menu {
     display: none !important;
   }
-  
+
   /* إعادة ضبط الشريط العلوي */
   .navbar {
     /* position: static; */
     /* padding: 15px; */
     height: auto;
   }
-  
+
   /* إعادة ضبط الشعار */
   .navbar-brand {
     position: static;
     transform: none;
     margin-right: auto;
   }
-  
+
   /* إظهار القائمة الأصلية */
   .navbar-collapse {
     display: flex !important;
     flex-basis: auto;
   }
-  
+
   /* تعديلات الهيرو */
   #hero-area {
     margin-top: 0;
@@ -419,81 +424,87 @@ footer{
 }
 @media (max-width: 767px) {
   .copyright {
-      float: none;
+    float: none;
   }
 }
 @media (min-width: 576px) {
-  #login .container,#login .container-sm {
-      max-width: 100%;
+  #login .container,
+  #login .container-sm {
+    max-width: 100%;
   }
 }
 /* بقية التنسيقات... */
 
 /* Login Section Styling */
 .login-container {
-    position: relative;
-    background: url('../img/bg.jpg') no-repeat center center;
-    background-size: cover;
-    margin: 0 10%;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    padding: 40px 0;
+  position: relative;
+  background: url("../img/bg.jpg") no-repeat center center;
+  background-size: cover;
+  margin: 0 10%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  padding: 40px 0;
 }
 
 .login-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(244, 243, 243, 0.551); /* Adjust the opacity (0.4) for desired fade effect */
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(
+    244,
+    243,
+    243,
+    0.551
+  ); /* Adjust the opacity (0.4) for desired fade effect */
+  z-index: 1;
 }
 
 /* Ensure content stays above the faded background */
 .login-form,
 .login-right {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
-
 
 .login-form {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 20px;
 }
-.login-right img{
+.login-right img {
   width: 200px;
 }
 .login-right h3 {
-    color: var(--primary-color);
-    margin-bottom: 30px;
-    font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-size: 2rem;
 }
-.form-control{
+.form-control {
   border-radius: 0;
   color: var(--text-color);
   border-radius: 10px;
   border: 1px solid #606a74;
 }
-.form-control input,.form-control:focus{
-  color:var(--text-color);
+.form-control input,
+.form-control:focus {
+  color: var(--text-color);
 }
 /* counter section */
 
 /* Responsive adjustments */
 @media (max-width: 767px) {
-    .login-form,
-    .login-right {
-        padding: 30px;
-        margin: 10px;
-    }
+  .login-form,
+  .login-right {
+    padding: 30px;
+    margin: 10px;
+  }
 }
 @media (max-width: 992px) {
   .navbar-brand {
@@ -522,20 +533,20 @@ footer{
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
 }
-.nav-item.dropdown{
- position: relative;
- position: relative;
- position: relative;
- z-index: 9999 !important; /* Maximum priority for dropdown parent */
- font-family: 'OMNES-ARABIC-BOLD','tajawal',sans-serif;
- /* font-weight: bold; */
- font-size: 14px;
+.nav-item.dropdown {
+  position: relative;
+  position: relative;
+  position: relative;
+  z-index: 9999 !important; /* Maximum priority for dropdown parent */
+  font-family: "OMNES-ARABIC-BOLD", "tajawal", sans-serif;
+  /* font-weight: bold; */
+  font-size: 14px;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   padding: 0;
   margin: 0;
-  min-width:25rem;
+  min-width: 25rem;
   background-color: var(--white);
   color: var(--text-color);
   border-radius: 10px;
@@ -543,12 +554,13 @@ footer{
   z-index: 9999 !important; /* Force highest priority */
   box-shadow: var(--shadow);
 }
-.dropdown-item.active, .dropdown-item:active{
+.dropdown-item.active,
+.dropdown-item:active {
   background-color: #61a795;
-  color:var(--white) ;
+  color: var(--white);
 }
 
-.dropdown-item{
+.dropdown-item {
   padding: 12px 15px;
   border-bottom: 1px solid #f0f0f0; /* Add divider between items */
 }
